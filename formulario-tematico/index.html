@@ -26,8 +26,80 @@
             </section>
             <section id="cardapio">
                 <h2>Cardápio:</h2>
-                <img src="images/menu.jpg" alt="cardapio da Hamburgueria" width="900">
+                <figure>
+                    <img src="images/menu.jpg" alt="cardapio da Hamburgueria" width="450">
+                </figure>
+            </section>
+            <section id="reservas">
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend><b>Reserva de Mesa</b></legend>
+                        
+                        <label for="campo-nome">Nome Completo:</label>
+                        <br>
+                        <input type="text" name="nome_completo" id="campo_nome" placeholder="Insira seu nome" required size="40">
+                        <br>
 
+                        <label for="campo_email">Email para contato:</label>
+                        <br>
+                        <input type="email" name="email" id="campo_email"placeholder="Insira seu email" required size="40">
+                        <br>
+
+                        <label for="campo_telefone">Telefone:</label>
+                        <br>
+                        <input type="tel" name="telefone" id="campo_telefone" placeholder="Insira seu telefone" required size="40">
+                        <input type="radio" name="tel_opcao" id="tel_opcao_celular" value="celular" checked>
+                        <label for="tel_opcao_celular">Celular</label>
+                        <input type="radio" name="tel_opcao" id="tel_opcao_whatsapp" value="whatsapp">
+                        <label for="tel_opcao_whatsapp">Whatsapp</label>
+                        <br>
+
+                        <label for="dia_reserva">Dia da reserva:</label>
+                        <span style="width:50px;display:inline-block"></span>
+                        <label for="horario_reserva">Horário da reserva:</label><br>
+                        <input type="date" name="data" id="dia_reserva" required min="2026-10-13" max="2026-10-31">
+                        <span style="width:30px;display:inline-block"></span>
+                        <input type="time" name="horario" id="horario_reserva" required min="14:00" max="22:00">
+                        <br>
+
+                        <label for="mesa_selecionada">Mesas disponíveis:</label><br>
+                        <select name="mesas_disponiveis" id="mesa_selecionada" style="background-color:#ccc7c6">
+                            <option value="">Selecione a mesa que deseja reservar.</option>
+                            <option value="13">Mesa 13</option>
+                            <option value="4">Mesa 4</option>
+                            <option value="8">Mesa 8</option>
+                        </select>
+                        <br>
+                        <br>
+
+                        <label for="numero_pessoas">Quantidade de pessoas:</label><br>
+                        <input type="range" name="numero_pessoas" id="numero_pessoas" min="1" max="6" value="1" oninput="amount.value=numero_pessoas.value">                                                       
+                        <output name="amount" id="amount" for="numero_pessoas">1</output>
+                        <br>
+                        <br>
+
+                        <label for="tipo_prato">Escolha seu tipo de prato:</label><br>
+                        <input list="tipo_de_prato" id="tipo_prato" name="tipo_pratos" placeholder="Selecione o tipo de prato">
+                        <datalist id="tipo_de_prato">
+                            <option value="Redondo"></option>
+                            <option value="Quadrado"></option>
+                            <option value="Fundo"></option>
+                        </datalist>
+                        <br>
+                        <br>
+
+                        <label for="campo-observacao">Observações adicionais</label>
+                        <br>
+                        <textarea name="observacoes_adicionais" id="campo-observacao" rows="4" cols="50" placeholder="Informe aqui qualquer observação extra relacionado à reserva."></textarea>
+                        <br>
+                        <br>
+                        <br>
+
+                        <button type="submit" style="background-color:#ccc7c6">Criar reserva</button>
+                        <button type="reset" style="background-color:#ccc7c6">Limpar dados</button>
+                    </fieldset>
+
+                </form>
 
             </section>
 
