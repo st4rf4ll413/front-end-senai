@@ -17,5 +17,34 @@
             </nav>
         </header>
         <hr>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Informações para contato</legend>
+                    <label for="nome_completo">Nome Completo:</label>
+                    <br>
+                    <input type="text" name="nome" id="nome_completo" placeholder="Insira seu nome" required size="40">
+                    <br>
+
+                    <label for="emailContato">Email:</label>
+                    <br>
+                    <input type="email" name="emailContato" id="emailContato" placeholder="Insira seu email" required size="40">
+                    <br>
+
+                    <label for="assuntoContato">Assunto:</label>
+                    <br>
+                    <textarea name="assuntoContato" id="assuntoContato" rows="1" cols="40" placeholder="Informe o assunto" required></textarea>
+                    <br>
+
+                    <label for="emailCorpo">Mensagem:</label>
+                    <br>
+                    <textarea name="emailCorpo" id="emailCorpo" rows="10" cols="60" placeholder="Informe o motivo para contato" required></textarea>
+                    <br>
+                    <br>
+                    <button type="submit"><b>Enviar Email</b></button>
+                    <button type="reset"><b>Limpar Dados</b></button>
+                </fieldset>
+            </form>
+        </main>
     </body>
 </html>
